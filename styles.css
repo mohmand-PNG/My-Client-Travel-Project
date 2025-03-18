@@ -1,0 +1,1017 @@
+/* General Reset */
+
+* {
+  margin: 0;
+
+  padding: 0;
+
+  box-sizing: border-box;
+
+  font-family: "Poppins", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: url("") center/cover no-repeat;
+  color: white;
+}
+.main-section {
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh; /* Ensures it covers the full screen */
+  background-size: cover; /* Ensures the image covers the whole section */
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 1s ease-in-out; /* Smooth transition */
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: multiply;
+}
+
+/* Navbar */
+
+.navbar {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 20px;
+
+  position: fixed;
+
+  width: 100%;
+
+  top: 0;
+
+  z-index: 1000;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  /* transition: all 0.5s ease-in-out; */
+}
+
+.nav-links {
+  list-style: none;
+
+  display: flex;
+
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+
+  color: white;
+
+  font-weight: 500;
+  transition: all 0.5s ease-in;
+}
+.nav-links a:hover {
+  color: #1466be;
+}
+/* From Uiverse.io by mrhyddenn */
+.bookNowBTN {
+  background: transparent;
+  color: #fff;
+  font-size: 17px;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: none;
+  padding: 20px 30px;
+  cursor: pointer;
+  perspective: 30rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.308);
+}
+
+.bookNowBTN::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  background: linear-gradient(
+    320deg,
+    rgba(0, 140, 255, 0.678),
+    rgba(128, 0, 128, 0.308)
+  );
+  z-index: 1;
+  transition: background 3s;
+}
+
+.bookNowBTN:hover::before {
+  animation: rotate 1s;
+  transition: all 0.5s;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateY(180deg);
+  }
+
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.hamburger {
+  display: none;
+
+  font-size: 24px;
+
+  color: white;
+}
+
+/* Hero Section */
+
+.hero {
+  height: 100vh;
+
+  position: relative;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-align: center;
+  /* background: rgba(0, 0, 0, 0.5); */
+}
+
+.overlay {
+  position: absolute;
+
+  width: 100%;
+
+  height: 100%;
+
+  /* background: rgba(0, 0, 0, 0.5); */
+}
+
+.hero-content {
+  position: relative;
+
+  z-index: 2;
+}
+
+.title {
+  font-size: 10em;
+
+  font-weight: bold;
+}
+
+.title-container {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 15px;
+}
+
+.title-container i {
+  font-size: 80px;
+
+  font-weight: bold;
+}
+
+.subtitle {
+  font-size: 24px;
+
+  color: rgba(255, 255, 255, 0.8);
+
+  margin-top: 10px;
+
+  text-align: center;
+}
+
+/* Destination Cards */
+
+.destination-cards {
+  display: flex;
+
+  gap: 20px;
+
+  margin-top: 30px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+
+  padding: 20px;
+
+  text-align: start;
+
+  border-radius: 8px;
+
+  width: 200px;
+
+  display: flex;
+
+  justify-content: space-between;
+}
+
+.card i {
+  padding-top: 5px;
+
+  font-size: 24px;
+
+  margin-bottom: 10px;
+}
+
+.card-icon {
+  padding-top: 10px;
+}
+
+/* Responsive Design */
+
+/* For tablets and smaller screens */
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px;
+
+    justify-content: space-between;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hero {
+    height: 80vh; /* Adjust height */
+  }
+
+  .title {
+    font-size: 5em; /* Adjust title size */
+  }
+
+  .title-container i {
+    font-size: 50px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+  }
+
+  .destination-cards {
+    flex-direction: column;
+
+    gap: 15px;
+
+    margin-top: 20px;
+  }
+
+  .card {
+    width: 80%; /* Card width for smaller screens */
+
+    margin: 0 auto; /* Center align cards */
+  }
+}
+
+/* For mobile devices */
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px;
+
+    justify-content: space-between;
+  }
+
+  .hero {
+    height: 70vh; /* Adjust height further for mobile */
+  }
+
+  .title {
+    font-size: 3em; /* Further adjust title size */
+  }
+
+  .title-container i {
+    font-size: 40px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .destination-cards {
+    flex-direction: column;
+
+    gap: 10px;
+
+    margin-top: 15px;
+  }
+
+  .card {
+    width: 90%; /* Card width for mobile */
+
+    margin: 0 auto; /* Center align cards */
+  }
+}
+
+@media (max-width: 768px) {
+  .bookNowBTN {
+    font-size: 14px; /* Slightly smaller font size for tablet */
+
+    padding: 8px 15px; /* Adjust padding for smaller screen */
+  }
+}
+
+/* For mobile devices */
+
+@media (max-width: 480px) {
+  .bookNowBTN {
+    font-size: 12px; /* Smaller font size for mobile */
+
+    padding: 6px 12px; /* Adjust padding for mobile */
+  }
+}
+/* For tablets and smaller screens */
+
+/* hfjkfhsjfhsdjkfhrufhrjfhdhfuhfjjhuehfjehfshjfhuhfaihfjshfuehuehfkjhfud */
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    padding-top: 60px; /* Space for the navbar */
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1100; /* Make sure hamburger stays on top */
+  }
+
+  .nav-links.active {
+    display: block;
+  }
+
+  /* Style for nav links when active */
+  .nav-links a {
+    display: block;
+    padding: 15px 0;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .nav-links a:hover {
+    background-color: #007bff; /* Highlight on hover */
+  }
+}
+/* second section */
+/* General Reset */
+
+* {
+  margin: 0;
+
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+/* Background */
+
+/* Section Container */
+
+.travel-reasons-section {
+  background: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/160/486/original/3.jpg?1742205683") no-repeat center center/cover;
+  background-color: rgba(0, 0, 0, 0.384);
+  background-blend-mode: multiply;
+  font-family: "Arial", sans-serif;
+
+  color: white;
+  display: block;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  padding: 3em;
+}
+
+/* Main Heading */
+
+.section-heading {
+  font-size: 24px;
+
+  font-weight: bold;
+
+  text-transform: uppercase;
+
+  margin-bottom: 30px;
+}
+
+/* Content Layout */
+
+.section-container {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+  padding: 40px;
+
+  border: 1px solid rgba(5, 100, 141, 0.6);
+  margin: 3em;
+  /* margin-bottom: 3em; */
+}
+
+/* Text Content */
+
+.text-content {
+  width: 45%;
+
+  text-align: left;
+}
+
+.trip-heading {
+  font-size: 22px;
+
+  text-transform: uppercase;
+}
+
+.trip-heading span {
+  font-weight: bold;
+}
+
+.trip-description {
+  font-size: 14px;
+
+  line-height: 1.6;
+
+  margin-top: 10px;
+
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.trip-price {
+  font-size: 16px;
+
+  font-weight: bold;
+
+  margin-top: 10px;
+}
+
+/* CTA Button */
+
+.ctabutton {
+  display: inline-block;
+
+  margin-top: 15px;
+
+  padding: 12px 24px;
+
+  background: rgba(0, 174, 255, 0.8);
+
+  border: none;
+
+  color: white;
+
+  font-size: 14px;
+
+  font-weight: bold;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  border-radius: 5px;
+
+  transition: 0.3s ease-in-out;
+}
+
+.ctabutton:hover {
+  background: rgba(0, 174, 255, 1);
+}
+
+@media (max-width: 768px) {
+  .section-container {
+    flex-direction: column;
+
+    text-align: center;
+  }
+
+  .text-content {
+    width: 100%;
+  }
+  .slider-container {
+    width: 90%;
+  }
+  .slider {
+    width: 100%;
+
+    margin-top: 20px;
+  }
+
+  .active {
+    width: 160px;
+
+    height: 220px;
+  }
+
+  .side {
+    width: 140px;
+
+    height: 200px;
+  }
+
+  .left-image {
+    left: -70px;
+  }
+
+  .right-image {
+    right: -70px;
+  }
+}
+@media (max-width: 480px) {
+  .slider-container {
+    width: 100%;
+  }
+  .slider {
+    width: 100%;
+
+    margin-top: 20px;
+  }
+
+  .active {
+    width: 60px;
+
+    height: 220px;
+  }
+
+  .side {
+    width: 50px;
+
+    height: 200px;
+  }
+}
+
+* {
+  margin: 0;
+
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+body {
+  /* display: flex; */
+
+  justify-content: center;
+
+  align-items: center;
+
+  height: 100vh;
+
+  background-color: #222;
+}
+
+.slider-container {
+  width: 70%;
+  height: 30em;
+  width: 30em;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: height 1s ease-in-out;
+}
+
+.slider {
+  display: flex;
+  gap: 5px;
+  transition: transform 2s ease-in-out;
+  position: relative;
+}
+
+.slide {
+  /* width: calc(30.33% - 10px); */
+  width: 40%;
+  height: 20em;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+
+  opacity: 0.2;
+
+  cursor: pointer;
+  border-radius: 20px;
+}
+.slider .slide:not(.active) {
+  opacity: 0.5;
+}
+.active {
+  width: calc(40% - 10px);
+  /* height: 30em; */
+  transform: scale(1.2);
+  opacity: 1;
+  z-index: 2;
+}
+
+/* ĺlllllllllllllllllllllllllll */
+/* Global Styles */
+
+* {
+  margin: 0;
+
+  padding: 0;
+
+  box-sizing: border-box;
+
+  font-family: "Arial", sans-serif; /* Closest modern sans-serif */
+}
+
+/* Background */
+
+.about-section {
+  background: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/160/487/original/add.jpg?1742205782") no-repeat center center/cover;
+   background-color: rgba(0, 0, 0, 0.82);
+  background-blend-mode: multiply;
+  /* color: white; */
+}
+
+/* Section Title */
+
+.section-title {
+  text-align: center;
+
+  font-size: 2rem;
+
+  font-weight: bold;
+
+  padding-top: 50px;
+}
+
+/* About Section Container */
+
+.about-container {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 50px;
+
+  max-width: 1100px;
+
+  margin: auto;
+
+  padding: 5em 0em;
+}
+
+/* Left Image */
+
+.about-image img {
+  width: 100%;
+
+  max-width: 450px;
+
+  height: auto;
+
+  border-radius: 10px;
+}
+
+/* Right Content Box */
+
+.about-content {
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent dark box */
+
+  padding: 30px;
+
+  border-radius: 10px;
+
+  max-width: 500px;
+}
+
+/* Heading & Paragraph */
+
+.about-heading {
+  font-size: 1.8rem;
+
+  font-weight: bold;
+
+  margin-bottom: 10px;
+}
+
+.about-text {
+  font-size: 1rem;
+
+  line-height: 1.5;
+
+  color: #ddd;
+
+  margin-bottom: 20px;
+}
+
+/* Read More Button */
+
+.btn {
+  display: inline-block;
+
+  background: #3498db;
+
+  color: white;
+
+  padding: 10px 20px;
+
+  text-decoration: none;
+
+  font-weight: bold;
+
+  border-radius: 5px;
+
+  margin-bottom: 20px;
+}
+
+.btn:hover {
+  background: #217dbb;
+}
+
+/* Stats Section */
+
+.stats {
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-top: 10px;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 1.5rem;
+
+  font-weight: bold;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+
+  color: #bbb;
+}
+
+/* Responsive Design */
+
+@media (max-width: 900px) {
+  .about-container {
+    flex-direction: column;
+
+    text-align: center;
+  }
+
+  .about-image img {
+    max-width: 100%;
+  }
+
+  .about-content {
+    max-width: 90%;
+  }
+
+  .stats {
+    justify-content: center;
+
+    gap: 30px;
+  }
+}
+
+/* fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff */
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+.popular-tour {
+  background: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/160/488/original/add2.jpg?1742205811") no-repeat center center/cover;
+  background-color: rgba(0, 0, 0, 0.7);
+  background-blend-mode: multiply;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #ffffff;
+  margin: 0;
+  padding: 8em;
+}
+.popular-tour h1 {
+  font-family: "Arial", sans-serif;
+  text-align: center;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding-bottom: 1em;
+}
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 300px;
+}
+/* 1111111111111111111111111111111111111111111 */
+
+* {
+  margin: 0;
+
+  padding: 0;
+
+  box-sizing: border-box;
+
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  /* display: flex; */
+
+  justify-content: center;
+
+  align-items: center;
+}
+
+.contact-section {
+  background: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/160/489/original/5.jpg?1742205836") no-repeat center center fixed;
+  /* background: url("add.jpg") no-repeat center center/cover; */
+   background-color: rgba(0, 0, 0, 0.82);
+  background-blend-mode: multiply;
+  background-size: cover;
+
+  width: 100%;
+
+  height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  padding: 0 10%;
+}
+
+.contact-container {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  width: 100%;
+
+  max-width: 1000px;
+}
+
+.contact-text {
+  flex: 1;
+}
+
+.contact-text h2 {
+  font-size: 3rem;
+
+  color: white;
+
+  font-weight: 600;
+
+  line-height: 1.4;
+
+  text-transform: uppercase;
+}
+
+.contact-form {
+  flex: 1;
+
+  display: flex;
+
+  justify-content: center;
+}
+
+form {
+  width: 100%;
+
+  max-width: 350px;
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+label {
+  color: white;
+
+  font-size: 0.9rem;
+
+  margin-bottom: 5px;
+}
+
+input,
+textarea {
+  background: transparent;
+
+  border: none;
+
+  border-bottom: 2px solid rgba(173, 216, 230, 0.8);
+
+  color: white;
+
+  font-size: 1rem;
+
+  padding: 10px 0;
+
+  outline: none;
+
+  margin-bottom: 15px;
+
+  width: 100%;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.button2 {
+  background: #00aaff;
+
+  border: none;
+
+  padding: 10px 20px;
+
+  font-size: 1rem;
+
+  font-weight: bold;
+
+  color: white;
+
+  cursor: pointer;
+
+  border-radius: 20px;
+
+  transition: background 0.3s;
+
+  width: fit-content;
+
+  align-self: center;
+}
+
+.button2:hover {
+  background: #0088cc;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+
+    text-align: center;
+  }
+
+  .contact-text h2 {
+    font-size: 1.8rem;
+
+    margin-bottom: 20px;
+  }
+
+  form {
+    max-width: 100%;
+  }
+}

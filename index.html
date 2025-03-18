@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Travel Hero Section</title>
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- emailJS cdn -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "buBRpxsrArmU7Uml9",
+        });
+      })();
+    </script>
+  </head>
+
+  <body>
+    <section id="home" class="main-section">
+      <nav class="navbar">
+        <div class="social-icons">
+          <i class="fa-brands fa-facebook"></i>
+
+          <i class="fa-brands fa-twitter"></i>
+
+          <i class="fa-brands fa-instagram"></i>
+        </div>
+
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+
+          <li><a href="#why-us">Why US</a></li>
+          <li><a href="#about">About</a></li>
+
+          <li><a href="#popular-tour">Hot Tours</a></li>
+
+          <!-- <li><a href="#">Contact</a></li> -->
+        </ul>
+
+        <button class="bookNowBTN" onclick="booknow()">Book Now</button>
+
+        <div class="hamburger">&#9776;</div>
+      </nav>
+
+      <!-- Hero Section -->
+
+      <header class="hero">
+        <div class="overlay"></div>
+
+        <div class="hero-content">
+          <div class="title-container">
+            <i class="fa-solid fa-chevron-left"></i>
+            <h1 class="title">TRAVEL</h1>
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+
+          <p class="subtitle">Plan Your Experience</p>
+
+          <div class="destination-cards">
+            <div class="card">
+              <div class="card-icon">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+
+              <div class="card-text">
+                <h3>New Zealand</h3>
+
+                <p>Plan a trip now</p>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-icon">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+
+              <div class="card-text">
+                <h3>Indonesia</h3>
+
+                <p>Plan a trip now</p>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-icon">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+
+              <div class="card-text">
+                <h3>Argentina</h3>
+
+                <p>Plan a trip now</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+    </section>
+
+    <section id="why-us" class="travel-reasons-section">
+      <h2 class="section-heading">
+        5 REASONS WHY YOU SHOULD VISIT NEW ZEALAND
+      </h2>
+
+      <div class="section-container">
+        <div class="text-content">
+          <h3 class="trip-heading">TRIP OF YOUR <span>DREAM</span></h3>
+
+          <p class="trip-description">
+            5 days and 4 nights in a hotel with an amazing atmosphere.<br />
+
+            Hot air balloon flight at dawn + Photoshoot. Riding an ATV in the
+            desert.<br />
+
+            3 cities: Auckland, Christchurch, Wellington.<br />
+
+            Round-trip tickets + transfer to the hotel.<br />
+          </p>
+
+          <p class="trip-price">1180$ for two.</p>
+
+          <button class="ctabutton">BOOK A TOUR</button>
+        </div>
+
+        <div class="slider-container">
+          <div class="slider">
+            <img
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/160/578/original/download_%2812%29.1.jpg?1742279120"
+              class="slide"
+            />
+
+            <img
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/160/579/original/2.1.jpg?1742279148"
+              class="slide"
+            />
+
+            <img
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/160/580/original/3.1.jpg?1742279180"
+              class="slide active"
+            />
+
+            <img
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/160/581/original/4.jpg?1742279248"
+              class="slide"
+            />
+
+            <img
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/160/582/original/download_%288%29.jpg?1742279266"
+              class="slide"
+            />
+
+            <img
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/160/583/original/7.jpg?1742279283"
+              class="slide"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about-section">
+      <h2 class="section-title">ABOUT US</h2>
+
+      <div class="about-container">
+        <!-- Left: Image -->
+
+        <div class="about-image">
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/160/584/original/house1.jpg?1742279303"
+            alt="Scenic Travel View"
+          />
+        </div>
+
+        <!-- Right: Content -->
+
+        <div class="about-content">
+          <h3 class="about-heading">Get to know us</h3>
+
+          <p class="about-text">
+            Start the day with a walk around picturesque Lake Wakatipu and a
+            delicious breakfast at one of Queenstown’s award-winning cafés.
+            Following breakfast, soak in the incredible scenery from the water
+            on a thrilling jet boat trip.
+          </p>
+
+          <a href="#" class="btn">READ MORE</a>
+
+          <div class="stats">
+            <div class="stat-item">
+              <span class="stat-number">500</span>
+
+              <span class="stat-label">Tours</span>
+            </div>
+
+            <div class="stat-item">
+              <span class="stat-number">10</span>
+
+              <span class="stat-label">Years</span>
+            </div>
+
+            <div class="stat-item">
+              <span class="stat-number">1500</span>
+
+              <span class="stat-label">Members</span>
+            </div>
+
+            <div class="stat-item">
+              <span class="stat-number">550</span>
+
+              <span class="stat-label">Reviews</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Swiper -->
+    <section id="popular-tour" class="popular-tour">
+      <h1>Popular tour</h1>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/160/584/original/house1.jpg?1742279303"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/160/585/original/add2.jpg?1742279317"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/160/586/original/waterfall_%282%29.jpg?1742279337"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/160/587/original/boat.jpg?1742279358"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/160/588/original/add.jpg?1742279376"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/160/589/original/Waterfall.jpg?1742279393"
+            />
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <div class="contact-container">
+        <div class="contact-text">
+          <h2>SEND US A REQUEST TO BOOK A COOL TRIP</h2>
+        </div>
+
+        <div class="contact-form">
+          <form id="contact-form">
+            <label for="name">NAME</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="email">EMAIL</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="message">MESSENGER</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit" class="button2">SEND</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
