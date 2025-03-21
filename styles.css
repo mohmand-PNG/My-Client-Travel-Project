@@ -41,7 +41,7 @@ body {
 
   padding: 20px;
 
-  /* position: fixed; */
+  position: fixed;
 
   width: 100%;
 
@@ -400,7 +400,8 @@ body {
 /* Section Container */
 
 .travel-reasons-section {
-  background: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/160/486/original/3.jpg?1742205683") no-repeat center center/cover;
+  background: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/160/486/original/3.jpg?1742205683")
+    no-repeat center center/cover;
   background-color: rgba(0, 0, 0, 0.384);
   background-blend-mode: multiply;
   font-family: "Arial", sans-serif;
@@ -651,8 +652,9 @@ body {
 /* Background */
 
 .about-section {
-  background: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/160/487/original/add.jpg?1742205782") no-repeat center center/cover;
-   background-color: rgba(0, 0, 0, 0.82);
+  background: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/160/487/original/add.jpg?1742205782")
+    no-repeat center center/cover;
+  background-color: rgba(0, 0, 0, 0.82);
   background-blend-mode: multiply;
   /* color: white; */
 }
@@ -813,7 +815,8 @@ body {
 }
 
 .popular-tour {
-  background: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/160/488/original/add2.jpg?1742205811") no-repeat center center/cover;
+  background: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/160/488/original/add2.jpg?1742205811")
+    no-repeat center center/cover;
   background-color: rgba(0, 0, 0, 0.7);
   background-blend-mode: multiply;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -869,9 +872,10 @@ body {
 }
 
 .contact-section {
-  background: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/160/489/original/5.jpg?1742205836") no-repeat center center fixed;
+  background: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/160/489/original/5.jpg?1742205836")
+    no-repeat center center fixed;
   /* background: url("add.jpg") no-repeat center center/cover; */
-   background-color: rgba(0, 0, 0, 0.82);
+  background-color: rgba(0, 0, 0, 0.82);
   background-blend-mode: multiply;
   background-size: cover;
 
