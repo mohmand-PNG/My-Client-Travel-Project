@@ -17,18 +17,6 @@ function changeBackground() {
 setInterval(changeBackground, 5000);
 changeBackground();
 
-// the navbar menu
-document.addEventListener("DOMContentLoaded", function () {
-  // Get the hamburger menu and the navigation links
-  const hamburger = document.querySelector(".hamburger");
-  const navLinks = document.querySelector(".nav-links");
-
-  hamburger.addEventListener("click", function () {
-    // Toggle the 'active' class to show or hide the navigation links
-    navLinks.classList.toggle("active");
-  });
-});
-
 const slides = document.querySelectorAll(".slide");
 
 const slider = document.querySelector(".slider");
